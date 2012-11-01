@@ -50,35 +50,33 @@
 
 @implementation MyViewController
 
-@synthesize textField;
-@synthesize label;
-@synthesize string;
+@synthesize tabelView;
 
 - (void)viewDidLoad {
     // When the user starts typing, show the clear button in the text field.
-    textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+//    textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     // When the view first loads, display the placeholder text that's in the
     // text field in the label.
-    label.text = textField.placeholder;
+//    label.text = textField.placeholder;
 }
 
 
 - (void)updateString {
 	
 	// Store the text of the text field in the 'string' instance variable.
-	self.string = textField.text;
+//	self.string = textField.text;
     // Set the text of the label to the value of the 'string' instance variable.
-	label.text = self.string;
+//	label.text = self.string;
 }
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
 	// When the user presses return, take focus away from the text field so that the keyboard is dismissed.
-	if (theTextField == textField) {
-		[textField resignFirstResponder];
-        // Invoke the method that changes the greeting.
-        [self updateString];
-	}
+//	if (theTextField == textField) {
+//		[textField resignFirstResponder];
+//        // Invoke the method that changes the greeting.
+//        [self updateString];
+//	}
 	return YES;
 }
 
@@ -86,9 +84,9 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     // Dismiss the keyboard when the view outside the text field is touched.
-    [textField resignFirstResponder];
+//    [textField resignFirstResponder];
     // Revert the text field to the previous value.
-    textField.text = self.string; 
+//    textField.text = self.string; 
     [super touchesBegan:touches withEvent:event];
 }
 
@@ -97,8 +95,7 @@
 	// To adhere to memory management rules, release the instance variables.
     // 'textField' and 'label' are objects in the nib file and are created when the nib
     // is loaded.
-	[textField release];
-	[label release];
+	[tabelView release];
 	[super dealloc];
 }
 

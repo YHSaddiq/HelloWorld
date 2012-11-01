@@ -49,14 +49,10 @@
 
 @interface MyViewController : UIViewController <UITextFieldDelegate> {
 	
-	IBOutlet UITextField *textField;
-	IBOutlet UILabel *label;
-	NSString *string;
+	IBOutlet UITableView *tableView;
 }
 
-@property (nonatomic, retain) UITextField *textField;
-@property (nonatomic, retain) UILabel *label;
-@property (nonatomic, copy) NSString *string;
+@property (nonatomic, retain) UITableView *tabelView;
 
 - (void)updateString;
 
